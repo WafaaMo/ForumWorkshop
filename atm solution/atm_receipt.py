@@ -40,25 +40,23 @@ class ATM:
                     print("give " + str(request))
                     request = 0
 
-        self.withdrawals_list.append(request)
+        #self.withdrawals_list.append(request) ''' You should delete this line
         return self.balance
 
     def show_withdrawals(self):
-        print self.withdrawals_list
+        print("==========Withdrawals==========")
         for withdrawal in self.withdrawals_list:
             print(withdrawal)
+            print("--------------------")
 
 balance1 = 500
-balance2 = 1000
 
 atm1 = ATM(balance1, "Smart Bank")
-atm2 = ATM(balance2, "Baraka Bank")
 
+""" Smart Bank """
 atm1.withdraw(277)
 atm1.withdraw(800)
-
-atm2.withdraw(100)
-atm2.withdraw(2000)
+atm1.withdraw(25)
+atm1.withdraw(10)
 
 atm1.show_withdrawals()
-atm2.show_withdrawals()
