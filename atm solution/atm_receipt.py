@@ -40,7 +40,6 @@ class ATM:
                     print("give " + str(request))
                     request = 0
 
-        self.withdrawals_list.append(request)
         return self.balance
 
     def show_withdrawals(self):
@@ -56,9 +55,11 @@ atm2 = ATM(balance2, "Baraka Bank")
 
 atm1.withdraw(277)
 atm1.withdraw(800)
+atm1.withdraw(20)
 
 atm2.withdraw(100)
 atm2.withdraw(2000)
+atm2.withdraw(250)
 
 atm1.show_withdrawals()
 atm2.show_withdrawals()
